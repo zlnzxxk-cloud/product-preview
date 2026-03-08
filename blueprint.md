@@ -11,6 +11,7 @@ A simple and elegant Lotto Number Generator web application built with vanilla J
 - **Theme Support:** Toggle between Dark Mode (default) and Light Mode.
 - **Persistent Preferences:** Remembers the user's theme choice using `localStorage`.
 - **Partnership Inquiry Form:** Integrated with Formspree for handling contact messages.
+- **Community Comments:** Integrated with Disqus to allow users to leave comments and feedback.
 
 ## Design
 - **Typography:** Uses the 'Poppins' font for a modern look.
