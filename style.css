@@ -8,6 +8,7 @@
     --accent-color: #00e676;
     --header-p-color: #ccc;
     --noise-opacity: 0.1;
+    --card-bg: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="light"] {
@@ -18,6 +19,7 @@
     --accent-color: #00c853;
     --header-p-color: #555;
     --noise-opacity: 0.05;
+    --card-bg: rgba(0, 0, 0, 0.03);
 }
 
 body {
@@ -49,6 +51,9 @@ body::before {
 .container {
     text-align: center;
     z-index: 1;
+    max-width: 800px;
+    width: 90%;
+    padding: 2rem 0;
 }
 
 header h1 {
@@ -61,6 +66,19 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: var(--header-p-color);
+}
+
+.tool-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .tool-section {
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 #generate-btn {
@@ -81,10 +99,96 @@ header p {
     box-shadow: 0 5px 15px var(--primary-color), 0 0 30px var(--primary-color);
 }
 
+/* Animal Test UI */
+.animal-test .description {
+    margin-bottom: 2rem;
+    color: var(--header-p-color);
+}
+
+.upload-area {
+    border: 2px dashed var(--primary-color);
+    border-radius: 20px;
+    padding: 3rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.upload-area:hover {
+    background: rgba(255, 222, 0, 0.05);
+}
+
+.upload-placeholder .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#preview-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.progress-bars {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-item span {
+    width: 50px;
+    font-weight: 600;
+}
+
+.progress-bg {
+    flex-grow: 1;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+[data-theme="light"] .progress-bg {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--primary-color);
+    transition: width 0.5s ease-out;
+}
+
+#dog-bar { background: #fbc400; }
+#cat-bar { background: #69c8f2; }
+
+#result-text {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+/* Common */
 .theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 100;
 }
 
 #theme-btn {
@@ -114,14 +218,13 @@ lotto-numbers {
 .contact-section {
     margin-top: 5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] .contact-section {
-    background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -185,7 +288,7 @@ lotto-numbers {
 .comments-section {
     margin-top: 5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -193,6 +296,5 @@ lotto-numbers {
 }
 
 [data-theme="light"] .comments-section {
-    background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
 }

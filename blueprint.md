@@ -1,36 +1,37 @@
-# Lotto Number Generator Blueprint
+# Fun AI Tools Blueprint
 
 ## Overview
-A simple and elegant Lotto Number Generator web application built with vanilla JavaScript and Web Components. It features a modern design, interactive elements, and now supports both Dark and Light modes.
+A web platform featuring multiple interactive AI-powered tools, including a Lotto Number Generator and an AI Animal Face Test. Built with vanilla JavaScript, Web Components, and TensorFlow.js.
 
-## Features
-- **Lotto Number Generation:** Generates 6 unique random numbers between 1 and 45.
-- **Web Components:** Uses a custom `<lotto-numbers>` element for encapsulated logic and styling.
-- **Dynamic Styling:** Lotto balls are color-coded based on their number ranges.
-- **Animations:** Smooth "pop-in" animations for newly generated numbers.
-- **Theme Support:** Toggle between Dark Mode (default) and Light Mode.
-- **Persistent Preferences:** Remembers the user's theme choice using `localStorage`.
-- **Partnership Inquiry Form:** Integrated with Formspree for handling contact messages.
-- **Community Comments:** Integrated with Disqus to allow users to leave comments and feedback.
+## Core Features
+1. **Lotto Number Generator:**
+   - Generates 6 unique random numbers (1-45).
+   - Custom `<lotto-numbers>` Web Component.
+   - Dynamic color-coding and "pop-in" animations.
+
+2. **AI Animal Face Test:**
+   - Uses a Teachable Machine model to classify user photos as "Dog" or "Cat".
+   - Integrated with TensorFlow.js and the `@teachablemachine/image` library.
+   - Features image upload with drag-and-drop support and real-time preview.
+   - Displays results with visual progress bars and fun descriptions.
+
+3. **Global Features:**
+   - **Theme Support:** Dark Mode (default) and Light Mode with persistence via `localStorage`.
+   - **Modern UI:** Glassmorphism effects, responsive layout, and smooth CSS transitions.
+   - **Community & Contact:** Disqus comments and Formspree partnership form.
 
 ## Design
-- **Typography:** Uses the 'Poppins' font for a modern look.
-- **Colors:** 
-  - Dark Mode: Deep gray background with vibrant yellow highlights.
-  - Light Mode: Clean light gray background with bold text and accents.
-- **Form Design:** Clean, modern input fields with glassmorphism effects in dark mode.
-- **Effects:** Soft shadows, gradients, and a subtle noise texture for a premium feel.
-- **Responsive:** Centered layout that works across different screen sizes.
+- **Typography:** 'Poppins' font family.
+- **Visuals:** Subtle noise texture, multi-layered shadows, and vibrant accent colors.
+- **Responsiveness:** Fluid layout that adapts to mobile and desktop screens.
 
-## Technical Details
-- **Framework-less:** Built using standard HTML5, CSS3, and ES6+ JavaScript.
-- **State Management:** Theme state is managed via the `data-theme` attribute on the `<html>` element.
-- **Form Handling:** Formspree API handles email delivery without a custom backend.
-- **Deployment:** Hosted on GitHub Pages.
+## Technical Stack
+- **Frontend:** HTML5, CSS3 (Modern Baseline features), ES6+ JavaScript.
+- **AI/ML:** Teachable Machine (TensorFlow.js).
+- **Services:** Formspree (Forms), Disqus (Comments), GitHub Pages (Hosting).
 
-## Implementation Plan (Theme Support)
-1. **CSS Variables:** Define color schemes for both themes in `style.css`.
-2. **Toggle UI:** Add a fixed theme switch button in `index.html`.
-3. **Toggle Logic:** Implement JavaScript to switch the `data-theme` attribute and save the preference in `main.js`.
-4. **Smooth Transitions:** Add CSS transitions for background and text color changes.
-5. **Contact Form:** Add a section for partnership inquiries using Formspree.
+## Recent Updates
+- Added AI Animal Face Test section.
+- Redesigned layout into modular "Tool Sections".
+- Integrated Teachable Machine classification logic.
+- Added drag-and-drop file upload support.
