@@ -10,18 +10,21 @@ A simple and elegant Lotto Number Generator web application built with vanilla J
 - **Animations:** Smooth "pop-in" animations for newly generated numbers.
 - **Theme Support:** Toggle between Dark Mode (default) and Light Mode.
 - **Persistent Preferences:** Remembers the user's theme choice using `localStorage`.
+- **Partnership Inquiry Form:** Integrated with Formspree for handling contact messages.
 
 ## Design
 - **Typography:** Uses the 'Poppins' font for a modern look.
 - **Colors:** 
   - Dark Mode: Deep gray background with vibrant yellow highlights.
   - Light Mode: Clean light gray background with bold text and accents.
+- **Form Design:** Clean, modern input fields with glassmorphism effects in dark mode.
 - **Effects:** Soft shadows, gradients, and a subtle noise texture for a premium feel.
 - **Responsive:** Centered layout that works across different screen sizes.
 
 ## Technical Details
 - **Framework-less:** Built using standard HTML5, CSS3, and ES6+ JavaScript.
 - **State Management:** Theme state is managed via the `data-theme` attribute on the `<html>` element.
+- **Form Handling:** Formspree API handles email delivery without a custom backend.
 - **Deployment:** Hosted on GitHub Pages.
 
 ## Implementation Plan (Theme Support)
@@ -29,3 +32,4 @@ A simple and elegant Lotto Number Generator web application built with vanilla J
 2. **Toggle UI:** Add a fixed theme switch button in `index.html`.
 3. **Toggle Logic:** Implement JavaScript to switch the `data-theme` attribute and save the preference in `main.js`.
 4. **Smooth Transitions:** Add CSS transitions for background and text color changes.
+5. **Contact Form:** Add a section for partnership inquiries using Formspree.
