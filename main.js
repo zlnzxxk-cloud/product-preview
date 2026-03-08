@@ -69,6 +69,26 @@ customElements.define('lotto-numbers', LottoNumbers);
 document.addEventListener('DOMContentLoaded', () => {
     const lottoNumbersElement = document.querySelector('lotto-numbers');
     const generateBtn = document.getElementById('generate-btn');
+    const themeBtn = document.getElementById('theme-btn');
+    const htmlElement = document.documentElement;
+
+    // Theme Logic
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    updateThemeButtonText(savedTheme);
+
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeButtonText(newTheme);
+    });
+
+    function updateThemeButtonText(theme) {
+        themeBtn.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
 
     generateBtn.addEventListener('click', () => {
         lottoNumbersElement.generateNumbers();

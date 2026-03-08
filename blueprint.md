@@ -1,40 +1,31 @@
-# Lotto Number Generator
+# Lotto Number Generator Blueprint
 
 ## Overview
+A simple and elegant Lotto Number Generator web application built with vanilla JavaScript and Web Components. It features a modern design, interactive elements, and now supports both Dark and Light modes.
 
-This is a simple web application that generates random lottery numbers. The user can click a button to generate a new set of 6 unique numbers between 1 and 45.
+## Features
+- **Lotto Number Generation:** Generates 6 unique random numbers between 1 and 45.
+- **Web Components:** Uses a custom `<lotto-numbers>` element for encapsulated logic and styling.
+- **Dynamic Styling:** Lotto balls are color-coded based on their number ranges.
+- **Animations:** Smooth "pop-in" animations for newly generated numbers.
+- **Theme Support:** Toggle between Dark Mode (default) and Light Mode.
+- **Persistent Preferences:** Remembers the user's theme choice using `localStorage`.
 
-## Project Outline
+## Design
+- **Typography:** Uses the 'Poppins' font for a modern look.
+- **Colors:** 
+  - Dark Mode: Deep gray background with vibrant yellow highlights.
+  - Light Mode: Clean light gray background with bold text and accents.
+- **Effects:** Soft shadows, gradients, and a subtle noise texture for a premium feel.
+- **Responsive:** Centered layout that works across different screen sizes.
 
-### Style and Design
+## Technical Details
+- **Framework-less:** Built using standard HTML5, CSS3, and ES6+ JavaScript.
+- **State Management:** Theme state is managed via the `data-theme` attribute on the `<html>` element.
+- **Deployment:** Hosted on GitHub Pages.
 
-*   **Layout:** A clean, centered layout that is responsive and works well on mobile and web.
-*   **Color Palette:** A modern and vibrant color scheme.
-*   **Typography:** Clear and readable fonts.
-*   **Effects:** Subtle animations on the lottery numbers and a "glow" effect on the button.
-*   **Background:** A subtle noise texture for a premium feel.
-*   **Iconography:** Use of icons to enhance understanding.
-
-### Features
-
-*   **Lottery Number Generation:** Generates 6 unique random numbers from 1 to 45.
-*   **Interactive Button:** A button to trigger the generation of new numbers.
-*   **Web Component:** A custom element `<lotto-numbers>` will be used to display the generated numbers, encapsulating its structure, style, and behavior.
-
-## Current Plan
-
-1.  **Create `blueprint.md`:** Document the project's purpose, design, features, and the current plan.
-2.  **Modify `index.html`:**
-    *   Update the title to "Lotto Number Generator".
-    *   Add a main container for the application.
-    *   Include a header with a title and a short description.
-    *   Add a `<lotto-numbers>` custom element to display the numbers.
-    *   Add a button to generate new numbers.
-3.  **Modify `style.css`:**
-    *   Implement the modern design with a vibrant color palette, custom fonts, and responsive layout.
-    *   Add styles for the lottery number balls, including animations.
-    *   Style the "Generate" button with a glow effect.
-4.  **Modify `main.js`:**
-    *   Create the `LottoNumbers` web component.
-    *   Implement the logic for generating 6 unique random numbers between 1 and 45.
-    *   Add an event listener to the "Generate" button to call the number generation function and update the `<lotto-numbers>` component.
+## Implementation Plan (Theme Support)
+1. **CSS Variables:** Define color schemes for both themes in `style.css`.
+2. **Toggle UI:** Add a fixed theme switch button in `index.html`.
+3. **Toggle Logic:** Implement JavaScript to switch the `data-theme` attribute and save the preference in `main.js`.
+4. **Smooth Transitions:** Add CSS transitions for background and text color changes.
